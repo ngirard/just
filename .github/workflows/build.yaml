@@ -90,7 +90,7 @@ jobs:
         cargo update --locked --package just
 
     - name: Build
-      run: cargo build --all --target ${{ matrix.target }}
+      run: cargo build --all --release --target ${{ matrix.target }}
 
     - name: Test
       if: matrix.native
